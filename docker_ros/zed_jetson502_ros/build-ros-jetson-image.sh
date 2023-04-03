@@ -19,7 +19,7 @@ TAG="${ZED_SDK_MAJOR}.${ZED_SDK_MINOR}-ros-tools-devel-l4t-r35.${L4T_MINOR_VERSI
 
 echo "Building '${TAG}'" 
 
-docker build --build-arg 4T_MINOR_VERSION=${L4T_MINOR_VERSION} \
+docker build --build-arg L4T_MINOR_VERSION=${L4T_MINOR_VERSION} \
 		     --build-arg ZED_SDK_MAJOR=${ZED_SDK_MAJOR} \
 			 --build-arg ZED_SDK_MINOR=${ZED_SDK_MINOR} \
 			 --build-arg ROS_DISTRO_ARG=${ROS_DISTRO_ARG} \
