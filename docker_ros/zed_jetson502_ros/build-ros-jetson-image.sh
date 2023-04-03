@@ -23,4 +23,4 @@ docker build --build-arg 4T_MINOR_VERSION=${L4T_MINOR_VERSION} \
 		     --build-arg ZED_SDK_MAJOR=${ZED_SDK_MAJOR} \
 			 --build-arg ZED_SDK_MINOR=${ZED_SDK_MINOR} \
 			 --build-arg ROS_DISTRO_ARG=${ROS_DISTRO_ARG} \
-			 -t "${TAG}" -f Dockerilfe.rosjetson .
+			 -t "${TAG}" -f Dockerfile.rosjetson .
