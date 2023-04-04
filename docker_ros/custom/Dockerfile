@@ -12,12 +12,10 @@ RUN apt install -y python3-rosdep python3-rosinstall python3-rosinstall-generato
 RUN apt install -y python3-rosdep
 RUN rosdep init
 RUN rosdep update
-ARG TEMP_DIR=/temp
-WORKDIR $TEMP_DIR
+WORKDIR /root
 ADD ros_entrypoint.sh .
 RUN chmod +x ./ros_entrypoint.sh
-ENTRYPOINT ["$TEMP_DIR/ros_entrypoint.sh"]
-WORKDIR /root
+ENTRYPOINT ["./ros_entrypoint.sh"]
 CMD ["/bin/bash"]
 
 
