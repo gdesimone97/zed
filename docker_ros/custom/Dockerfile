@@ -12,7 +12,9 @@ RUN apt install -y python3-rosdep python3-rosinstall python3-rosinstall-generato
 RUN apt install -y python3-rosdep
 RUN rosdep init
 RUN rosdep update
-
+WORKDIR /app
+ADD ros-entrypoint.sh ros-entrypoint.sh
+ENTRYPOINT ["ros-entrypoint.sh"]
 CMD ["/bin/bash"]
 
 
