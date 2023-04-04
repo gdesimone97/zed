@@ -14,7 +14,7 @@ RUN rosdep init
 RUN rosdep update
 WORKDIR /app
 ADD ros_entrypoint.sh ros_entrypoint.sh
-ENTRYPOINT ["ros_entrypoint.sh"]
+ENTRYPOINT ["./ros_entrypoint.sh"]
 CMD ["/bin/bash"]
 
 
