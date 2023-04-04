@@ -12,6 +12,7 @@ RUN apt install -y python3-rosdep python3-rosinstall python3-rosinstall-generato
 RUN apt install -y python3-rosdep
 RUN rosdep init
 RUN rosdep update
+RUN apt install -y catkin-tools
 WORKDIR /root
 ADD ros_entrypoint.sh .
 RUN chmod +x ./ros_entrypoint.sh
